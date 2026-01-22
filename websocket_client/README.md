@@ -59,7 +59,7 @@ consulta.wav
 Executa uma sessão única, enviando o áudio em tempo real.
 
 ```bash
-python stt_ws_test.py \
+python run.py \
   --host-ws wss://<rota-stt>/ws/transcriber \
   --audio ./consulta.wav \
   --language portuguese
@@ -90,7 +90,7 @@ consulta.user_1.txt
 ### Exemplo com parâmetros explícitos
 
 ```bash
-python stt_ws_test.py \
+python run.py \
   --host-ws wss://<rota-stt>/ws/transcriber \
   --audio ./consulta.wav \
   --chunk-ms 20 \
@@ -106,7 +106,7 @@ python stt_ws_test.py \
 Simula vários usuários enviando áudio **em paralelo**, cada um com sua própria conexão WebSocket.
 
 ```bash
-python stt_ws_test.py \
+python run.py \
   --host-ws wss://<rota-stt>/ws/transcriber \
   --audios ./audio1.wav,./audio2.wav,./audio3.wav \
   --users 10 \
@@ -154,7 +154,7 @@ max       0.331
 ## Exemplo de uso em ambiente de produção
 
 ```bash
-python stt_ws_test.py \
+python run.py \
   --host-ws wss://stt.suaempresa.com/ws/transcriber \
   --audio ./consulta.wav \
   --language portuguese \
